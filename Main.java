@@ -25,7 +25,7 @@ class Main{
 			budget-=prices[index];
 			visited.add(index);
 			res.add(index);
-			for(int i=0;i<prices.length;i++){
+			for(int i=index+1;i<prices.length;i++){
 				if(!visited.contains(i)){
 					if(!solveRec(i,budget)){
 						break;
@@ -48,6 +48,6 @@ class Main{
 		}
 	}
 	public static void main(String[] args){
-		solve(40f);
+		solve(400f);
 	}
 }
